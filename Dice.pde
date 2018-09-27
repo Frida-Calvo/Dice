@@ -2,11 +2,12 @@ void setup()
 {
 	noLoop();
 	background(163, 57, 45);
-	size(500,500);
+	size(500,600);
 }
 void draw()
 {
 	background(163, 57, 45);
+	scoreBoard();
 	for(int y = 30; y <= 500; y+= 80) //6 rows
 	{
 		for(int x = 30; x <= 500 ; x+= 80)//6 collums
@@ -16,6 +17,7 @@ void draw()
 			Frida.roll();
 		}
 	}
+
 
 }
 
@@ -80,4 +82,15 @@ class Die //models one single dice cube
 		fill(0);
 
 	}
+
 }
+
+	void scoreBoard()
+	{
+		noStroke();
+		fill(130, 29, 18);
+		rect(100, 500, 300, 75);
+		fill(0);
+		textSize(22);
+		text("Welcome to Frida's Casino", 110, 550);
+	}
